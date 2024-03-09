@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+
+  backend:
+    image: eventswebsocket:v3
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_URL=mongodb://db:27017/websocketscomponents
+    depends_on:
+      - db
+
+  db:
+    image: mongo
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./mongo/db:/data/db
+      - ./mongodb-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+#volumes:
+  #mongodb-data:

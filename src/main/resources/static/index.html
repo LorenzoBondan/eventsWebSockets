@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Spring Boot WebSocket Application</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+
+<div id="page">
+    <div class="components-group">
+        <button type="submit" id="messageButton" name="messageButton" class="primary">Click here</button>
+        <input type="checkbox" id="messageCheckbox" name="messageCheckbox">Check</input>
+        <select id="messageSelect" name="messageSelect">
+            <option value="first">First</option>
+            <option value="second">Second</option>
+            <option value="third">Third</option>
+            <option value="fourth">Fourth</option>
+        </select>
+        <label id="messageLabel">Mouse Hover</label>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+</html>
